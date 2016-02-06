@@ -4,11 +4,15 @@ React Tutorial
 ## Step 1: Install npm modules.
 
 First create `.npmrc`. That file is wrote settings such as the following.
+`.npmrc` is read automatically when the execute `npm` command.   
 
 ```
-seve = true
+save = true
 save-exact = true
 ```
+
+If `save` is true then adding `--save` option.
+ `save-exact` is true then adding `--save-exact` option.
 
 Install the react and the react-dom modules via npm.
 
