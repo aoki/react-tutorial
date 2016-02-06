@@ -10,4 +10,15 @@ npm init
 npm i react react-dom
 ```
 
+react is core module of react.js.
+react-dom is dom rendering module.
+
+## Step 2: Install webpack
+
+Install webpack.
+
+```
+npm i webpack -D
+```
+
 
