@@ -6,7 +6,7 @@ React Tutorial
 First create `.npmrc`. That file is wrote settings such as the following.
 `.npmrc` is read automatically when the execute `npm` command.   
 
-```
+```.npmrc
 save = true
 save-exact = true
 ```
@@ -52,4 +52,72 @@ Install babel-loader for using via the webpack.
 
 ```
 npm i babel-loader -D
+```
+
+Create a `.babelrc` and write setting such as the following.
+
+```.babelrc
+{
+  "presets": ["es2015", "react"]
+}
+```
+
+## Create webpack configuration
+
+Next step is the create for configuration file for webpack.
+
+`entry` is the entry point for the application.
+`output.path` specifies the output destination of the generated files.
+`__dirname` is the directory where this configuration file exists.
+`filename` specifies the output file name.
+`[name]` is the key name specified in the `entry` object. In this case `[name]` is `bundle`.
+
+```webpack.config.js
+const path = require('path');
+
+module.exports = {
+  entry: {
+    bundle: '.src/app.js'
+  },
+  output: {
+    path: path.join(__dirname, 'public'),
+    filename: '[name].js'
+  },
+  module: {
+    loaders: [
+      {
+        loader: 'babel',
+        exclude: /node_modules/,
+        test: /\.js[x]?$]/,
+        query: {
+          cacheDirectory: true
+        }
+      }
+    ]
+  }
+};
+```
+
+After that, add npm run script to the `package.json`.
+
+`-p` option equals to `--optimize-minimize` and `--optimize-occurence-order`.
+`-d` option equals to `--debug`, `--devtool`, `source-map` and `--output-pathinfo`.
+`--watch` option run the recompile on the file change.
+
+```json
+  "scripts": {
+    "build:prod": "webpack -p",
+    "build:dev": "webpack -d",
+    "watch": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+```
+
+## Create JavaScript and html files and build
+
+- `src/js/app.js`
+- `public/index.html`
+
+```
+npm run build:dev
 ```

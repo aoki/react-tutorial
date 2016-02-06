@@ -11,6 +11,9 @@
     "npm": "3.3.12"
   },
   "scripts": {
+    "build:prod": "webpack -p",
+    "build:dev": "webpack -d",
+    "watch": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
