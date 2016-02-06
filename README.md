@@ -43,3 +43,9 @@ Install the Babel.
 ```
 npm i babel-core babel-preset-es2015 babel-preset-react -D
 ```
+
+Install babel-loader for using via the webpack. 
+
+```
+npm i babel-loader -D
+```
