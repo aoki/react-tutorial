@@ -1,24 +1,45 @@
 React Tutorial
 ================
 
-## Step 1: Install react and react-dom
+## Step 1: Install npm modules.
 
-Install react and react-dom modules via npm.
+First create `.npmrc`. That file is wrote settings such as the following.
+
+```
+seve = true
+save-exact = true
+```
+
+Install the react and the react-dom modules via npm.
 
 ```
 npm init
 npm i react react-dom
 ```
 
-react is core module of react.js.
-react-dom is dom rendering module.
+Here, `react` is core module of react.js.
+`react-dom` is dom rendering module.
 
-## Step 2: Install webpack
+- [react](https://www.npmjs.com/package/react)
+- [react-dom](https://www.npmjs.com/package/react-dom)
 
-Install webpack.
+
+Next, install the [webpack](https://www.npmjs.com/package/webpack).
 
 ```
 npm i webpack -D
 ```
 
+Install the Babel.
+`babel-core` is core module of babel.
+`babel-preset-es2015` translate source code to ES5 from the ES2015.
+`babel-preset-react` translate to ES5 from `jsx`.
+ 
+- [babel/packages/babel-core at master · babel/babel · GitHub](https://github.com/babel/babel/tree/master/packages/babel-core)
+- [ES2015 preset · Babel](http://babeljs.io/docs/plugins/preset-es2015/)
+- [React preset · Babel](http://babeljs.io/docs/plugins/preset-react/)
 
+
+```
+npm i babel-core babel-preset-es2015 babel-preset-react -D
+```
