@@ -1,6 +1,8 @@
 React Tutorial
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ringohub/react-tutorial.svg)](https://greenkeeper.io/)
+
 ## Step 1: Install npm modules.
 
 First create `.npmrc`. That file is wrote settings such as the following.
